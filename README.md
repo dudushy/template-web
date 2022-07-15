@@ -1,2 +1,2 @@
 # [template-web](https://dudushy.github.io/template-web/)
-Template for Web projects
+Template for Web projects.
