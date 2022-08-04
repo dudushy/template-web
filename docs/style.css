@@ -17,4 +17,5 @@ body {
     color: var(--text);
     background-color: var(--wall);
     text-align: center;
+    font-family: monospace;
 }
