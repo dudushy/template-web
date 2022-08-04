@@ -1,7 +1,7 @@
 :root {
     --text: #ffffff;
     --wall: #000000;
-    
+
     --primary: #3880ff;
     --secondary: #3dc2ff;
     --tertiary: #5260ff;
@@ -18,4 +18,12 @@ body {
     background-color: var(--wall);
     text-align: center;
     font-family: monospace;
+}
+
+a {
+    color: var(--tertiary);
+}
+
+span#heart {
+    color: var(--danger);
 }
