@@ -1,4 +1,9 @@
 :root {
+  --responsiveMax: 1vmax;
+  --responsiveMin: 1vmin;
+  --rmax2px: unit(calc(var(--responsiveMax) + 0px), px);
+  --rmin2px: unit(calc(var(--responsiveMin) + 0px), px);
+
   --text: #ffffff;
   --wall: #000000;
 
@@ -11,6 +16,24 @@
   --dark: #222428;
   --medium: #92949c;
   --light: #f4f5f8;
+}
+
+@media (orientation: portrait) {
+  :root {
+    --responsiveMax: 1vh;
+    --responsiveMin: 1vw;
+    --rmax2px: unit(calc(var(--responsiveMax) + 0px), px);
+    --rmin2px: unit(calc(var(--responsiveMin) + 0px), px);
+  }
+}
+
+@media (orientation: landscape) {
+  :root {
+    --responsiveMax: 1vw;
+    --responsiveMin: 1vh;
+    --rmax2px: unit(calc(var(--responsiveMax) + 0px), px);
+    --rmin2px: unit(calc(var(--responsiveMin) + 0px), px);
+  }
 }
 
 body {
