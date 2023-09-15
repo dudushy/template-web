@@ -1,1 +1,2 @@
-console.log("[template-web] Hello World!");
+const TITLE = "template-web";
+console.log(`[${TITLE}] init`);
