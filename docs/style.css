@@ -29,3 +29,21 @@ a {
 span#heart {
   color: var(--danger);
 }
+
+h1 {
+  font-size: calc(var(--responsiveUnit) * 2);
+}
+
+h2 {
+  font-size: calc(var(--responsiveUnit) * 1);
+}
+
+@media (orientation: portrait) {
+  h1 {
+    font-size: calc(var(--responsiveUnit) * 4);
+  }
+
+  h2 {
+    font-size: calc(var(--responsiveUnit) * 3);
+  }
+}
