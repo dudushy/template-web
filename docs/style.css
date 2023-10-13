@@ -27,7 +27,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: var(--text);
   background-color: var(--wall);
   text-align: center;
