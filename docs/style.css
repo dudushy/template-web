@@ -13,6 +13,12 @@
   --dark: #222428;
   --medium: #92949c;
   --light: #f4f5f8;
+  --black: #000000;
+  --white: #ffffff;
+
+  --headerHeight: calc(var(--responsiveUnit) * 3);
+  --footerHeight: calc(var(--responsiveUnit) * 5);
+  --mainHeight: calc(100vh - var(--headerHeight) - var(--footerHeight));
 }
 
 * {
@@ -23,39 +29,46 @@
   min-width: 0;
 }
 
-html {
-  overflow: hidden;
-}
-
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   color: var(--text);
   background-color: var(--wall);
   text-align: center;
   font-family: monospace;
-  overflow: auto;
+}
+
+header,
+footer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
+  min-height: var(--headerHeight);
   border-bottom: calc(var(--responsiveUnit) * 0.1) solid var(--light);
 }
 
 footer {
+  min-height: var(--footerHeight);
   border-top: calc(var(--responsiveUnit) * 0.1) solid var(--light);
 }
 
 main {
+  min-height: var(--mainHeight);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
 
 a {
@@ -75,11 +88,16 @@ h2 {
 }
 
 @media (orientation: portrait) {
+  :root {
+    --headerHeight: calc(var(--responsiveUnit) * 4);
+    --footerHeight: calc(var(--responsiveUnit) * 6);
+  }
+
   h1 {
-    font-size: calc(var(--responsiveUnit) * 4);
+    font-size: calc(var(--responsiveUnit) * 3);
   }
 
   h2 {
-    font-size: calc(var(--responsiveUnit) * 3);
+    font-size: calc(var(--responsiveUnit) * 2);
   }
 }
